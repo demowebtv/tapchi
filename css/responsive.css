@@ -154,7 +154,7 @@
     }
     .top-news-cate .post {
     	float: left;
-    	max-height: 292px;
+    	max-height: 392px;
     	overflow-y: scroll;
     }
     .th-item{
@@ -335,7 +335,7 @@
     }
 }
 @media screen and (max-width: 360px) {
-	.banner-top{height: 60px;}
+	.banner-top{height: 50px;}
 
 	.fs-item .fs-images{
 		width: 100%;

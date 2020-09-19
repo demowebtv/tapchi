@@ -546,12 +546,7 @@ li.dir:hover .sub3{
 .news-item .ni-content .title-news{
     font-size: 22px;
     font-weight: 600;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2 !important;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: block;
 }
 .news-item .ni-content .ni-desc{
     max-height: 44px;
