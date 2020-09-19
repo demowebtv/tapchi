@@ -1150,7 +1150,7 @@ footer{
 }
 .category-slider .box-title{
     margin-bottom: 10px;
-    width: calc(100% - 25px);
+    width: calc(100% + 25px);
 }
 /* detail */
 .top-news-detail .post{
