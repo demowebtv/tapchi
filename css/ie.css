@@ -1,0 +1,14 @@
+.navbar-expand-lg .navbar-nav .nav-link{
+	padding: 0 11px;
+}
+.row-cs{
+	width: 109%;
+}
+.news-item .ni-content .title-news{
+	max-height:48px ; font-size:18px;
+}
+@media screen (max-width: 991px) {
+	#news-slider .owl-pagination{
+		bottom: 145px !important;
+	}
+}
