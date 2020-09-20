@@ -185,7 +185,7 @@
     	padding-right: 0;
     }
     .top-news-detail .box-title{
-    	margin-top: 20px;
+    	margin-top: 5px;
     }
     .ads-right{
     	display: none;
@@ -334,6 +334,9 @@
     .top-news-cate .post{
         margin-bottom: 0;
     }
+		.top-news-detail .post{max-height: 300px;overflow: auto;}
+		.owl-item{padding: 0}
+		.category-slider .box-title{width: 100%;}
 }
 @media screen and (max-width: 360px) {
 	.banner-top{height: 50px;}
