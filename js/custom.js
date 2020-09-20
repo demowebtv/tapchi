@@ -66,10 +66,6 @@ $(document).ready(function(){
         itemsMobile: [767, 1],
         navigationText: ["", ""]
     });
-    var topNew = $('#news-slider').height();
-    if(topNew){
-      $('.post').css({"maxHeight":topNew-40});
-    }
 });
 
 

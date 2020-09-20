@@ -149,7 +149,7 @@
     	display: none;
     }
     .post{
-    	max-height: 445px;
+    	max-height: 450px;
     	overflow-y: scroll;
     }
     .top-news-cate .post {
@@ -348,7 +348,7 @@
 		padding-top: 10px;
 
 	}
-	
+
 	.bnc-image{
 		width: 100%;
 	}
