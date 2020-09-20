@@ -334,7 +334,7 @@
     .top-news-cate .post{
         margin-bottom: 0;
     }
-		.top-news-detail .post{max-height: 300px;overflow: auto;}
+		.top-news-detail .post{max-height: 400px;overflow: auto;}
 		.owl-item{padding: 0}
 		.category-slider .box-title{width: 100%;}
 }
