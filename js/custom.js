@@ -1,36 +1,29 @@
 $(document).ready(function(){
-
-   
     BrowserDetect.init();
-
-
      if (navigator.appVersion.indexOf("MSIE 8.") != -1
         || navigator.appVersion.indexOf("MSIE 9.") != -1
         || navigator.appVersion.indexOf("MSIE 10.") != -1
         || BrowserDetect.browser == "Explorer") {
             $('head').append('<link rel="stylesheet" href="css/ie.css"></link>');
     }
-
-
-
-    $('#showmenu').click(function() { 
-        $('.head-menu').addClass('open'); 
-        // $('.site-menu').addClass('hidden'); 
+    $('#showmenu').click(function() {
+        $('.head-menu').addClass('open');
+        // $('.site-menu').addClass('hidden');
     });
 
-    $('#closemenu').click(function(){ 
-        $('.head-menu').removeClass('open'); 
+    $('#closemenu').click(function(){
+        $('.head-menu').removeClass('open');
         $('.opacity').addClass('hidden');
-        // $('.site-menu').removeClass('hidden'); 
+        // $('.site-menu').removeClass('hidden');
     });
-    
-    $('#showmenu').click(function() { 
-        $('.head-menu').addClass('open');  
+
+    $('#showmenu').click(function() {
+        $('.head-menu').addClass('open');
     });
-    $('#showmenu').click(function() { 
-        $('.opacity').removeClass('hidden');  
+    $('#showmenu').click(function() {
+        $('.opacity').removeClass('hidden');
     });
-    
+
     $('#toggle-search-mb').click(function() {
         $('.search-box').toggleClass('open');
         $('.opacity').toggleClass('hidden');
@@ -73,9 +66,13 @@ $(document).ready(function(){
         itemsMobile: [767, 1],
         navigationText: ["", ""]
     });
+    var topNew = $('#news-slider').height();
+    if(topNew){
+      $('.post').css({"maxHeight":topNew-40});
+    }
 });
-        
-    
+
+
 
 
 var BrowserDetect = {
@@ -112,10 +109,10 @@ var BrowserDetect = {
             {string: navigator.userAgent, subString: "MSIE", identity: "Explorer"},
             {string: navigator.userAgent, subString: "Trident", identity: "Explorer"},
             {string: navigator.userAgent, subString: "Firefox", identity: "Firefox"},
-            {string: navigator.userAgent, subString: "Opera", identity: "Opera"},  
-            {string: navigator.userAgent, subString: "OPR", identity: "Opera"},  
+            {string: navigator.userAgent, subString: "Opera", identity: "Opera"},
+            {string: navigator.userAgent, subString: "OPR", identity: "Opera"},
 
-            {string: navigator.userAgent, subString: "Chrome", identity: "Chrome"}, 
-            {string: navigator.userAgent, subString: "Safari", identity: "Safari"}       
+            {string: navigator.userAgent, subString: "Chrome", identity: "Chrome"},
+            {string: navigator.userAgent, subString: "Safari", identity: "Safari"}
         ]
     };
