@@ -299,11 +299,12 @@
     	font-size: 16px;
     }
     .sapo-news p{
-    	margin-top: 10px;
-    	-webkit-line-clamp: 2 !important;
+    display: none;
     }
+		.date2 .day::before{color: #838383;}
+		.date2{color:#838383; }
     .bnc-image img{
-    	min-height: 125px;
+    	min-height: auto;
     }
     .page-link{
     	width: 40px;
