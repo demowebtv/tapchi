@@ -55,6 +55,7 @@
     .post{
         max-height: 445px;
     }
+		.top-news-cate .post{max-height: 415px;}
 }
 
 @media (min-width: 992px){
@@ -231,11 +232,8 @@
         width: 100%;
     }
     .post, .top-news-cate .post {
-    	max-height: 260px;
+    	max-height: 360px;
     	overflow-y: scroll;
-    }
-    .top-news-cate .post{
-        max-height: 198px;
     }
     .sapo-news p{
         margin-top: 10px;
