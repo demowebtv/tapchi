@@ -1119,7 +1119,7 @@ footer{
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 0;
 }
 /* pagination */
