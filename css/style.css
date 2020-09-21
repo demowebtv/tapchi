@@ -789,7 +789,7 @@ li.dir:hover .sub3{
     line-height: 24px;
     font-weight: bold;
     color: #696969;
-    font-size: 18px;
+    font-size: 17px;
 }
 .th-item a.t-tax{
     padding-left: 65px;
@@ -885,7 +885,7 @@ li.dir:hover .sub3{
     float: left;
 }
 .cl-title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     margin: 5px 0 0;
 }
@@ -920,7 +920,7 @@ li.dir:hover .sub3{
     overflow: hidden;
 }
 .inc-title{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     padding-left: 10px;
     /* max-height: 45px; */
@@ -935,7 +935,7 @@ li.dir:hover .sub3{
     right: 0;
     bottom: 5px;
     margin: 0;
-    font-size: 14px;
+    font-size: 13px;
     color: #838383;
     font-style: italic;
 }
