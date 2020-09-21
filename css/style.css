@@ -945,6 +945,7 @@ li.dir:hover .sub3{
 .mod{
     margin-bottom: 10px;
 }
+.top-news-detail .ads-right{margin-top: 12px; display: inline-block;}
 .ads-right .ads{
     margin-bottom: 12px;
 }
