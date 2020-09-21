@@ -188,6 +188,7 @@
     .top-news-detail .box-title{
     	margin-top: 5px;
     }
+		.top-news-detail .ads-right{display: none;}
     .ads-right{
     	display: none;
     }
