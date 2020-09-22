@@ -1,4 +1,4 @@
-$(document).ready(function(){
+  $(document).ready(function(){
     BrowserDetect.init();
      if (navigator.appVersion.indexOf("MSIE 8.") != -1
         || navigator.appVersion.indexOf("MSIE 9.") != -1
@@ -66,11 +66,23 @@ $(document).ready(function(){
         itemsMobile: [767, 1],
         navigationText: ["", ""]
     });
+    $(window).bind('resize', function(e){
+    window.resizeEvt;
+    $(window).resize(function(){
+        clearTimeout(window.resizeEvt);
+        window.resizeEvt = setTimeout(function(){
+          var topNew = $('#news-slider').height();
+             if(topNew){
+               $('#post').css({"maxHeight":topNew-40});
+             }
+        }, 250);
+      });
+    });
+    var topNew = $('#news-slider').height();
+       if(topNew){
+         $('#post').css({"maxHeight":topNew-40});
+       }
 });
-
-
-
-
 var BrowserDetect = {
         init: function () {
             this.browser = this.searchString(this.dataBrowser) || "Other";
