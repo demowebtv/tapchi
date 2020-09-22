@@ -1062,7 +1062,7 @@ footer{
 }
 .top-news-cate .post {
     float: left;
-    max-height: 485px;
+    max-height: 525px;
     overflow-y: scroll;
     margin-bottom: 17px;
 }
