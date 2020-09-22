@@ -155,7 +155,7 @@ button:focus{
     float: left;
     width: 100%;
     height: 45px;
-    background: #1143a4;
+    background: #184454;
     margin-bottom: 20px;
     border-bottom: 1px solid #e5e5e5;
 }
@@ -168,13 +168,13 @@ button:focus{
 }
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
     color: #fff;
-    background: #184454;
+    background: #316ad1;
     border-bottom: 2px solid #fff;
 }
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover, .nav-item:hover .nav-link
 {
     color: #fff;
-    background: #184454;
+    background: #316ad1;
     border-bottom: 2px solid #fff;
 }
 
@@ -203,7 +203,7 @@ button:focus{
     line-height: 30px;
     text-align: center;
     color: #fff;
-    background: #184454;
+    background: #316ad1;
     border-radius: 100%;
 }
 .dropdown-toggle::after{
@@ -479,7 +479,7 @@ li.dir:hover .sub3{
     white-space: nowrap;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    background: #1143a4;
+    background: #184454;
     display: none;
     position: relative;
     z-index: 3;
@@ -518,7 +518,7 @@ li.dir:hover .sub3{
     line-height: 30px;
     text-align: center;
     color: #fff;
-    background: #184454;
+    background: #316ad1;
     border-radius: 100%;
 }
 
@@ -968,7 +968,7 @@ footer{
     white-space: nowrap;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    background: #1143a4;
+    background: #184454;
     position: relative;
     z-index: 3;
 }
@@ -1005,7 +1005,7 @@ footer{
     line-height: 30px;
     text-align: center;
     color: #fff;
-    background: #184454;
+    background: #316ad1;
     border-radius: 100%;
 }
 .top-ft{
