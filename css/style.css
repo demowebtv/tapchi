@@ -588,7 +588,7 @@ li.dir:hover .sub3{
     position: relative;
     float: left;
     padding: 8px 20px 8px 20px;
-    background-color: #0f42ab;
+    background-color: #184454;
 }
 .title-cate::before{
     position: absolute;
@@ -599,7 +599,7 @@ li.dir:hover .sub3{
     right: -10px;
     height: 100%;
     width: 25px;
-    background-color: #0f42ab;
+    background-color: #184454;
     transform: skew(25deg,0deg);
     z-index: 2;
 }
@@ -625,7 +625,7 @@ li.dir:hover .sub3{
     font-weight: 600;
 }
 .box-title{
-    border-bottom: 2px solid #0f42ab;
+    border-bottom: 2px solid #184454;
     background: #f2f2f2;
     float: left;
     width: 100%;
