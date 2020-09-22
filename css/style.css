@@ -822,16 +822,16 @@ li.dir:hover .sub3{
 }
 /* multi media */
 .box-title3{
-    border-bottom: 2px solid #c02491;
+    border-bottom: 2px solid #184454;
 }
 .title-cate-3{
-    background: #c02491;
+    background: #184454;
 }
 .title-cate-3::before{
-    background: #c02491;
+    background: #184454;
 }
 .title-cate-3::after{
-    background: rgba(192, 36, 145, 0.5);
+    background: #18808d;
 }
 .multi-media{
     background: #f8fbf2;
