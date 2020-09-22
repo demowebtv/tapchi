@@ -612,7 +612,7 @@ li.dir:hover .sub3{
     right: -15px;
     height: 100%;
     width: 25px;
-    background-color: rgba(12, 67, 157, 0.5);
+    background-color: #18808d;
     transform: skew(25deg,0deg);
     z-index: 1;
 }
