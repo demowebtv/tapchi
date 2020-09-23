@@ -250,6 +250,12 @@
 		#fc-slider{padding: 0;}
 		#fc-slider .owl-prev{left: 5px;}
 		#fc-slider .owl-next{right: 5px;}
+		.content .cl-title{
+		    height: auto;
+		    display:block;
+		}
+		.media-thum{max-width: 100%;height: auto;}
+		.media-thum img{max-width: 100%;height: auto;}
 }
 @media screen and (max-width: 576px) {
     .menu-category li a{
