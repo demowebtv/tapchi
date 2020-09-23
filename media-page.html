@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multi Media page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <section class="top-page">
+      <div class="banner-top">
+      </div>
+      <div class="header">
+          <div class="container">
+              <a href="index.html" class="logo">
+                  <img src="images/logo.png" alt="">
+              </a>
+              <span class="time-now">
+                  Thứ tư, 26/8/2020
+              </span>
+              <div class="right">
+
+                  <form action="search" class="search" method="get" accept-charset="utf-8">
+                      <input id="keywordHeader" type="text" name="q" placeholder="Tìm kiếm" autocomplete="off">
+                      <button type="submit" title="Tìm kiếm" class="btn-search-vne" id="buttonSearchHeader">
+                          <i class="icon-search-1"></i>
+                      </button>
+                  </form>
+
+              </div>
+          </div>
+      </div>
+      <div id="navbar" class="menu">
+          <div class="container">
+              <nav class="navbar navbar-expand-lg navbar-light ">
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                          <li class="nav-item nav-home active">
+                              <a class="nav-link" href="index.html"> <i class="icon-home"></i> </a>
+                          </li>
+                          <li class="nav-item active">
+                              <a class="nav-link dropdown-toggle" href="category-page.html">
+                                  Tin tức
+                              </a>
+                              <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <li><a class="dropdown-item" href="#">Chính trị</a></li>
+                                  <li class="dir">
+                                      <a class="dropdown-item" href="#">Giáo dục</a>
+                                      <ul class="sub3">
+                                          <li>
+                                              <a href="#">Giáo dục Tiểu học</a>
+                                          </li>
+                                          <li>
+                                              <a href="#">Giáo dục THCS</a>
+                                          </li>
+                                          <li>
+                                              <a href="#">Giáo dục THPT</a>
+                                          </li>
+                                      </ul>
+                                  </li>
+                                  <li><a class="dropdown-item" href="#">Khoa học</a></li>
+                                  <li><a class="dropdown-item" href="#">Đời sống</a></li>
+                              </ul> -->
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="category-page.html">Thuế và cuộc sống</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="category-page.html">Chính sách mới</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="category-page.html">Diễn đàn nghiệp vụ</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="category-page.html">Tài chính - tiền tệ</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="category-page.html">Doanh nghiệp - thị trường</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="category-page.html">Thuế quốc tế</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="category-page.html">Văn hóa - xã hội</a>
+                          </li>
+
+
+                      </ul>
+                  </div>
+              </nav>
+          </div>
+      </div>
+  </section>
+  <!-- end -->
+  <section class="top-mobile">
+      <div id="header-mobile">
+          <div class="container">
+              <div class="top-bar group-tbstyle">
+                  <a href="javascript:void(0)" id="showmenu" class="btn-menu gr-action">
+                      <i class="icon-menu"></i>
+                  </a>
+                  <a href="index.html" class="logo-head gr-content text-center">
+                      <img src="images/logo.png" alt="">
+                  </a>
+                  <div class="cl"></div>
+
+                  <a href="javascript:void(0)" id="toggle-search-mb" class="header-button btn-search gr-action">
+                      <i class="icon-search-1"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="head-menu">
+              <div class="top-head-menu pull-left w--100">
+                  <span id="closemenu" class="close-menu  pointer">
+                      <i class="icon-close"></i>
+                  </span>
+                  <div class="pd-10">
+                      <h2 class="aside-title">Chuyên mục</h2>
+                  </div>
+                  <form action="search" class="search" method="get" accept-charset="utf-8">
+                      <input id="keywordHeader" type="text" name="q" placeholder="Tìm kiếm" autocomplete="off">
+                      <button type="submit" title="Tìm kiếm" class="btn-search-vne" id="buttonSearchHeader">
+                          <i class="icon-search-1"></i>
+                      </button>
+                  </form>
+              </div>
+              <ul class="menu-category pull-left w--100">
+                  <li>
+                      <a href="category-page.html">Tin tức</a>
+                  </li>
+                  <li>
+                      <a href="category-page.html">Thuế và cuộc sống</a>
+                  </li>
+                  <li>
+                      <a href="category-page.html">Chính sách mới</a>
+                  </li>
+                  <li>
+                      <a href="category-page.html">Diễn đàn nghiệp vụ</a>
+                  </li>
+                  <li>
+                      <a href="category-page.html">Tài chính - tiền tệ</a>
+                  </li>
+                  <li>
+                      <a href="category-page.html">Doanh nghiệp - thị trường</a>
+                  </li>
+                  <li>
+                      <a href="category-page.html">Thuế quốc tế</a>
+                  </li>
+                  <li>
+                      <a href="category-page.html">Văn hóa - xã hội</a>
+                  </li>
+
+              </ul>
+          </div>
+      </div>
+      <nav id="navbar-mb" class="site-menu">
+          <div class="container">
+              <ul class="site-menu__list">
+                  <li>
+                      <a href="index.html"><i class="icon-home"></i></a>
+                  </li>
+                  <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="category-page.html">
+                                  Tin tức
+                              </a>
+                              <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <li><a class="dropdown-item" href="#">Chính trị</a></li>
+                                  <li class="dir">
+                                      <a class="dropdown-item" href="#">Giáo dục</a>
+                                      <ul class="sub3">
+                                          <li>
+                                              <a href="#">Giáo dục Tiểu học</a>
+                                          </li>
+                                          <li>
+                                              <a href="#">Giáo dục THCS</a>
+                                          </li>
+                                          <li>
+                                              <a href="#">Giáo dục THPT</a>
+                                          </li>
+                                      </ul>
+                                  </li>
+                                  <li><a class="dropdown-item" href="#">Khoa học</a></li>
+                                  <li><a class="dropdown-item" href="#">Đời sống</a></li>
+                              </ul> -->
+                          </li>
+                  <li>
+                      <a href="category-page.html">Thuế và cuộc sống</a>
+                  </li>
+                  <li>
+                      <a href="category-page.html">Chính sách mới</a>
+                  </li>
+                  <li>
+                      <a href="category-page.html">Diễn đàn nghiệp vụ</a>
+                  </li>
+                  <li>
+                      <a href="category-page.html">Tài chính - tiền tệ</a>
+                  </li>
+                  <li>
+                      <a href="category-page.html">Doanh nghiệp - thị trường</a>
+                  </li>
+                  <li>
+                      <a href="category-page.html">Thuế quốc tế</a>
+                  </li>
+                  <li>
+                      <a href="category-page.html">Văn hóa - xã hội</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+      <div class="search-box">
+          <div class="container">
+              <form id="search-form-mb" action="">
+
+                  <input id="keywordHeader" type="text" name="q" placeholder="Tìm kiếm" autocomplete="off">
+                  <button type="submit" title="Tìm kiếm" class="btn-search-vne" id="buttonSearchHeader">
+                      <i class="icon-search-1"></i>
+                  </button>
+
+              </form>
+          </div>
+      </div>
+  </section>
+    <!-- end -->
+    <div class="opacity hidden w--100"></div>
+    <!-- end -->
+    <section class="main">
+        <div class="container">
+            <div class="top-news media-page">
+                <div class="row">
+                    <div class="col-lg-12">
+                      <img src="images/media_banner.png" class="img-fluid" alt="" />
+                      <div class="text-center pt-3"><h3>Thư viện Multi Media</h3></div>
+                          <div class="col-sm-12 p-0">
+                            <ul class="nav justify-content-center" role="tablist" id="media-tab" >
+                              <li class="nav-item">
+                                <a class="nav-link active show" href="#images" data-toggle="tab" role="tab" aria-controls="images" aria-selected="true">Hình ảnh</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#videos" data-toggle="tab" role="tab" aria-controls="videos" aria-selected="false">Video</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#infographic" data-toggle="tab" role="tab" aria-controls="infographic" aria-selected="false">Infographic</a>
+                              </li>
+                            </ul>
+                          </div>
+                            <div class="col-lg-12 p-0">
+                              <div class="tab-content">
+                                <div class="tab-pane fade show active" id="images" role="tabpanel" aria-labelledby="images">
+                                  <div class="row">
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item1.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Tổng cục trưởng Cao Anh Tuấn chủ trì Hội nghị giao ban trực tuyến công tác thuế</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item2.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2 class="cl-title">Kết nạp Đảng</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item3.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Phó TCT Đặng Ngọc Minh chủ trì họp trực tuyến quốc tế về đối phố dịch Covid19</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item1.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Tổng cục trưởng Cao Anh Tuấn chủ trì Hội nghị giao ban trực tuyến công tác thuế</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item2.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2 class="cl-title">Kết nạp Đảng</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item3.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Phó TCT Đặng Ngọc Minh chủ trì họp trực tuyến quốc tế về đối phố dịch Covid19</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item1.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Tổng cục trưởng Cao Anh Tuấn chủ trì Hội nghị giao ban trực tuyến công tác thuế</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item2.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2 class="cl-title">Kết nạp Đảng</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item3.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Phó TCT Đặng Ngọc Minh chủ trì họp trực tuyến quốc tế về đối phố dịch Covid19</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                  </div><!-- row-->
+                                </div>
+                                <div class="tab-pane fade" id="videos" role="tabpanel" aria-labelledby="videos">
+                                  <div class="row">
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><iframe width="100%" height="220" src="https://www.youtube.com/embed/ckwmbfURz9o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Đề xuất về thuế trong gói hỗ trợ dịch Covid-19 lần hai</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><iframe width="100%" height="220" src="https://www.youtube.com/embed/ckwmbfURz9o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Đề xuất về thuế trong gói hỗ trợ dịch Covid-19 lần hai</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><iframe width="100%" height="220" src="https://www.youtube.com/embed/ckwmbfURz9o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Đề xuất về thuế trong gói hỗ trợ dịch Covid-19 lần hai</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                  </div><!-- row-->
+                                </div>
+                                <div class="tab-pane fade" id="infographic" role="tabpanel" aria-labelledby="infographic">
+                                  <div class="row">
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item1.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Tổng cục trưởng Cao Anh Tuấn chủ trì Hội nghị giao ban trực tuyến công tác thuế</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item2.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2 class="cl-title">Kết nạp Đảng</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item3.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Phó TCT Đặng Ngọc Minh chủ trì họp trực tuyến quốc tế về đối phố dịch Covid19</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item1.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Tổng cục trưởng Cao Anh Tuấn chủ trì Hội nghị giao ban trực tuyến công tác thuế</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item2.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2 class="cl-title">Kết nạp Đảng</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item3.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Phó TCT Đặng Ngọc Minh chủ trì họp trực tuyến quốc tế về đối phố dịch Covid19</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item1.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Tổng cục trưởng Cao Anh Tuấn chủ trì Hội nghị giao ban trực tuyến công tác thuế</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item2.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2 class="cl-title">Kết nạp Đảng</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                      <div class="media-items">
+                                        <div class="media-thum"><img class="img-fluid" src="images/media_item3.png" alt=""></div>
+                                        <p class="media-date">08/09/2020</p>
+                                        <h2  class="cl-title">Phó TCT Đặng Ngọc Minh chủ trì họp trực tuyến quốc tế về đối phố dịch Covid19</h2>
+                                        <a href="#" class="read-more">Xem chi tiết ></a>
+                                      </div>
+                                    </div>
+                                  </div><!-- row-->
+                                </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-12 p-3">
+                              <div class="pagi-page">
+                                 <nav aria-label="Page navigation example">
+                                      <ul class="pagination">
+                                          <li class="page-item"><a class="page-link" href="#"><i class="icon-left-open"></i></a></li>
+                                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                          <li class="page-item"><a class="page-link active" href="#">2</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                          <li class="page-item"><a class="page-link" href="#"><i class="icon-right-open"></i></a></li>
+                                      </ul>
+                                  </nav>
+                              </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+    <footer>
+      <div class="top-ft">
+          <ul>
+              <li><a href="#">Thông tin Tòa soạn</a></li>
+              <li><a href="lien-he-dat-bao.html">Liên hệ đặt báo và ấn phẩm</a></li>
+              <li><a href="lien-he.html">Liên hệ quảng cáo</a></li>
+          </ul>
+      </div>
+        <nav class="menu-ft">
+            <div class="container">
+                <ul class="menu-ft__list">
+                    <li>
+                        <a href="#"><i class="icon-home"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Tin tức</a>
+                    </li>
+                    <li>
+                        <a href="#">Thuế và cuộc sống</a>
+                    </li>
+                    <li>
+                        <a href="#">Chính sách mới</a>
+                    </li>
+                    <li>
+                        <a href="#">Diễn đàn nghiệp vụ</a>
+                    </li>
+                    <li>
+                        <a href="#">Tài chính - tiền tệ</a>
+                    </li>
+                    <li>
+                        <a href="#">Doanh nghiệp - thị trường</a>
+                    </li>
+                    <li>
+                        <a href="#">Thuế quốc tế</a>
+                    </li>
+                    <li>
+                        <a href="#">Văn hóa - xã hội</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="copyright">
+            <div class="container">
+                <div class="logo-ft"><a href="#"><img src="images/logo.png" class="img-fluid" alt=""></a></div>
+            <span class="txt-copyright">
+                <strong> © Bản quyền 2020 Tạp chí Thuế.</strong> <br>
+
+                Phó Tổng biên tập phụ trách: Ths. Đặng Thị Thanh Mai <br>
+
+                Giấy phép số 89/GP-TTĐT ngày 26/06/2012 của Bộ Thông tin & Truyền thông<br>
+
+                Địa chỉ: 123 Lò Đúc, phường Đống Mác, quận Hai Bà Trưng, TP Hà Nội.<br>
+
+                Điện thoại liên hệ: <span class="cl-sdt"> 043.512.1195</span><br>
+
+                E-mail: <span class="cl-mail"> tapchithue@gdt.gov.vn</span><br>
+
+                Ghi rõ nguồn Tạp chí Thuế khi phát hành lại thông tin từ Website này.
+            </span>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+</body>
+
+</html>
