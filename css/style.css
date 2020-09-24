@@ -1363,3 +1363,4 @@ textarea.form-control {
 .box-answer .title-cate{background-color:#18808d;}
 .box-answer .title-cate::before{background-color: #18808d;}
 .box-answer .title-cate::after{background-color: #184454;}
+.box-online .post{margin-bottom: 10px;}
