@@ -283,6 +283,7 @@
     .cl-title{
     	margin: 10px 0 0;
     }
+		.media-items .cl-title{margin: 0;}
     .ads-mobile{
     	display: block;
     	margin: 10px auto 10px;

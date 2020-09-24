@@ -1341,6 +1341,7 @@ textarea.form-control {
     border-bottom: 3px solid #18808d;
 }
 .media-items{margin-bottom: 20px;}
+.media-items .cl-title{margin: 0;}
 .media-page .media-date{margin: 0;padding-top: 1rem;color:#184454; }
 .media-thum{max-width: 100%;height: 220px;overflow: hidden;}
 .media-thum img{height: 100%;width: auto;}
