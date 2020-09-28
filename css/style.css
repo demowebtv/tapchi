@@ -1288,7 +1288,7 @@ textarea.form-control {
     position: relative;
     width: calc(100% - 20px);
     float: left;
-    padding: 7px 20px;
+    padding: 5px 20px;
 }
 .list-other a::before{
     width: 6px;
@@ -1297,7 +1297,7 @@ textarea.form-control {
     content: '';
     position: absolute;
     left: 0;
-    top: 16px;
+    top: 13px;
     border-radius: 100%;
 
 }
