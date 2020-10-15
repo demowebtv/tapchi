@@ -73,7 +73,6 @@
         window.resizeEvt = setTimeout(function(){
           var topNew = $('#news-slider').height();
              if(topNew){
-               if(topNew<578) topNew = 578;
                $('#post').css({"maxHeight":topNew-40});
              }
         }, 250);
@@ -81,7 +80,7 @@
     });
     var topNew = $('#news-slider').height();
        if(topNew){
-         if(topNew<578) topNew = 578;
+         if(topNew<400) topNew = 400;
          $('#post').css({"maxHeight":topNew-40});
        }
 });
