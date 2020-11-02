@@ -580,6 +580,8 @@ li.dir:hover .sub3{
     transition: all .2s;
     margin-right: 10px;
 }
+.ni-image{max-height: 395px; overflow: hidden;}
+.top-news .ads{overflow: hidden;}
 .owl-pagination .owl-page:last-child {
     margin-right: 0 !important;
 }
@@ -806,6 +808,7 @@ li.dir:hover .sub3{
     width: 100%;
     max-height: 772px;
     overflow-y: auto;
+    padding-right: 5px;
 }
 .tax-hot::-webkit-scrollbar {
     background-color:#fff;
