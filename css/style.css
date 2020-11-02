@@ -581,7 +581,7 @@ li.dir:hover .sub3{
     margin-right: 10px;
 }
 .ni-image{max-height: 395px; overflow: hidden;}
-.top-news .ads{overflow: hidden;}
+.top-news .ads{overflow: hidden;height: 100%;}
 .owl-pagination .owl-page:last-child {
     margin-right: 0 !important;
 }
