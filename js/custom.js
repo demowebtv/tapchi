@@ -75,7 +75,7 @@
           var topNew = $('#news-slider').height();
              if(topNew){
                $('#post').css({"maxHeight":topNew-40});
-               $('.ads').css({"height":topNew});
+               $('.homeads').css({"height":topNew});
              }
         }, 250);
       });
@@ -84,7 +84,7 @@
        if(topNew){
          if(topNew<400) topNew = 400;
          $('#post').css({"maxHeight":topNew-40});
-         $('.ads').css({"height":topNew});
+         $('.homeads').css({"height":topNew});
        }
        function carouselNormalization() {
 
