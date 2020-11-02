@@ -676,12 +676,12 @@ li.dir:hover .sub3{
   right:15px;
   top:20px;
 }
-#post::-webkit-scrollbar {
+#post::-webkit-scrollbar,#scrollbar::-webkit-scrollbar {
   display: none;
 }
-
+#scrollbar .ssb_sb{right: 5px;}
 /* Hide scrollbar for IE, Edge and Firefox */
-#post {
+#post,#scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }

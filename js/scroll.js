@@ -9,6 +9,8 @@ var ssb = {
 
   // constructor
   scrollbar : function (cont_id) {
+    var p=40;
+    if(cont_id == 'scrollbar') p=0;
     var cont = document.getElementById(cont_id);
 
     // perform initialization
@@ -77,7 +79,7 @@ var ssb = {
     // onscroll - change positions of scroll element
     cont.ssb_onscroll = function () {
       this.ratio = (this.offsetHeight - 2 * this.sw) / this.scrollHeight;
-      this.sb.style.top = Math.floor(40+this.sw + this.scrollTop * this.ratio) + 'px';
+      this.sb.style.top = Math.floor(p+this.sw + this.scrollTop * this.ratio) + 'px';
     }
 
     // scrollbar width
@@ -177,4 +179,5 @@ var ssb = {
 
 window.onload = function() {
   ssb.scrollbar('post'); // scrollbar initialization
+  ssb.scrollbar('scrollbar');
 }
