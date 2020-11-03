@@ -1,4 +1,7 @@
   $(document).ready(function(){
+
+    var mydate = new Date('2014-04-03');
+    console.log(mydate.toDateString());
     BrowserDetect.init();
      if (navigator.appVersion.indexOf("MSIE 8.") != -1
         || navigator.appVersion.indexOf("MSIE 9.") != -1
@@ -119,11 +122,11 @@
         });
 
     }
-	
+
     jQuery( document ).ready(function() {
         carouselNormalization();
     });
-	
+
 	$('.time-now').html(function(){
 		var d = new Date();
 		var weekday = new Array(7);
@@ -140,6 +143,23 @@
 		var dateTime = n+', '+date;
 		return dateTime;
 	});
+  // replace date
+  $('.date').each(function() {
+   var text = $(this).html();
+    var mapObj = {
+       Mon:"Thứ hai",
+       Tue:"Thứ ba",
+       Wed:"Thứ tư",
+       Thu:"Thứ năm",
+       Fri:"Thứ sáu",
+       Sat:"Thứ bảy",
+       Sun:"Chủ nhật"
+    };
+  text = text.replace(/Mon|Tue|Wed|Thu|Fri|Sat|Sun/gi, function(matched){
+    return mapObj[matched];
+  });
+  $(this).html(text);
+ });
 });
 var BrowserDetect = {
         init: function () {
