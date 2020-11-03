@@ -120,6 +120,10 @@
 
     }
 	
+    jQuery( document ).ready(function() {
+        carouselNormalization();
+    });
+	
 	$('.time-now').html(function(){
 		var d = new Date();
 		var weekday = new Array(7);
@@ -135,10 +139,7 @@
 		var date = d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear();
 		var dateTime = n+', '+date;
 		return dateTime;
-
-    jQuery( document ).ready(function() {
-        carouselNormalization();
-    });
+	});
 });
 var BrowserDetect = {
         init: function () {
