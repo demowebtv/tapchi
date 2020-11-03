@@ -119,6 +119,22 @@
         });
 
     }
+	
+	$('.time-now').html(function(){
+		var d = new Date();
+		var weekday = new Array(7);
+		weekday[0] = "Chủ nhật";
+		weekday[1] = "Thứ hai";
+		weekday[2] = "Thứ ba";
+		weekday[3] = "Thứ tư";
+		weekday[4] = "Thứ năm";
+		weekday[5] = "Thứ sáu";
+		weekday[6] = "Thứ bảy";
+
+		var n = weekday[d.getDay()];
+		var date = d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear();
+		var dateTime = n+', '+date;
+		return dateTime;
 
     jQuery( document ).ready(function() {
         carouselNormalization();

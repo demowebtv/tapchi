@@ -214,6 +214,9 @@
 		.ni-image{max-height: 320px;}
 		#news-slider .owl-pagination{bottom: 130px;}
 		.tax-hot{padding-right: 0;}#scrollbar .ssb_sb,#scrollbar.ssb_st{right: 0;}
+	.wpthemeMenuLeft {
+		display: none;
+	}		   
 }
 @media screen and (min-width: 768px){
 	.top-news .col-lg-8{

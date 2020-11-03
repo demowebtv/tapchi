@@ -809,7 +809,7 @@ li.dir:hover .sub3{
     width: 100%;
     max-height: 772px;
     overflow-y: auto;
-    padding-right: 5px;
+    padding-right: 14px;
 }
 .tax-hot::-webkit-scrollbar {
     background-color:#fff;
@@ -895,7 +895,7 @@ li.dir:hover .sub3{
 }
 .cl-img{
     width: 422px;
-    height: 316px;
+    height: 270px;
     background: #fafafa;
     overflow: hidden;
 }
@@ -919,7 +919,7 @@ li.dir:hover .sub3{
 }
 .item-news-common .thumb{
     width: 109px;
-    height: 81px;
+    height: 72px;
     float: left;
     overflow: hidden;
 }
