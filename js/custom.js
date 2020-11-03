@@ -77,7 +77,10 @@
                $('#post').css({"maxHeight":topNew-40});
                $('.homeads').css({"height":topNew});
              }
-        }, 250);
+             var media = $('.multi-media').outerHeight();
+             $('#scrollbar').css({"maxHeight":media});
+             ssb.refresh();
+        }, 350);
       });
     });
     var topNew = $('#news-slider').height();
@@ -85,6 +88,8 @@
          if(topNew<400) topNew = 400;
          $('#post').css({"maxHeight":topNew-40});
          $('.homeads').css({"height":topNew});
+         var media = $('.multi-media').outerHeight();
+         $('#scrollbar').css({"maxHeight":media});
        }
        function carouselNormalization() {
 

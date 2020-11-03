@@ -59,6 +59,9 @@
 	.top-news-cate .post{max-height: 457px;}
 	#news-slider .owl-pagination{bottom: 160px;}
 	.ni-image{max-height: 320px;}
+	.row-cs{
+			display: none;
+	}
 }
 
 @media (min-width: 992px){
