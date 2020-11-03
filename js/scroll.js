@@ -1,184 +1,183 @@
-  $(document).ready(function(){
-    BrowserDetect.init();
-     if (navigator.appVersion.indexOf("MSIE 8.") != -1
-        || navigator.appVersion.indexOf("MSIE 9.") != -1
-        || navigator.appVersion.indexOf("MSIE 10.") != -1
-        || BrowserDetect.browser == "Explorer") {
-            $('head').append('<link rel="stylesheet" href="css/ie.css"></link>');
+var ssb = {
+  aConts  : [],
+  mouseY : 0,
+  N  : 0,
+  asd : 0, /*active scrollbar element*/
+  sc : 0,
+  sp : 0,
+  to : 0,
+
+  // constructor
+  scrollbar : function (cont_id) {
+    var p=40;
+    if(cont_id == 'scrollbar') p=0;
+    var cont = document.getElementById(cont_id);
+
+    // perform initialization
+    if (! ssb.init()) return false;
+
+    var cont_clone = cont.cloneNode(false);
+    cont_clone.style.overflow = "hidden";
+    cont.parentNode.appendChild(cont_clone);
+    // adding new container into array
+    ssb.aConts[ssb.N++] = cont;
+
+    cont.sg = false;
+
+    //creating scrollbar child elements
+    cont.st = this.create_div('ssb_st', cont, cont_clone);
+    cont.sb = this.create_div('ssb_sb', cont, cont_clone);
+    cont.su = this.create_div('ssb_up', cont, cont_clone);
+    cont.sd = this.create_div('ssb_down', cont, cont_clone);
+
+    // on mouse down processing
+    cont.sb.onmousedown = function (e) {
+      if (! this.cont.sg) {
+        if (! e) e = window.event;
+
+        ssb.asd = this.cont;
+        this.cont.yZ = e.screenY;
+        this.cont.sZ = cont.scrollTop;
+        this.cont.sg = true;
+
+        // new class name
+        this.className = 'ssb_sb ssb_sb_down';
+      }
+      return false;
     }
-    $('#showmenu').click(function() {
-        $('.head-menu').addClass('open');
-        // $('.site-menu').addClass('hidden');
-    });
+    // on mouse down on free track area - move our scroll element too
+    cont.st.onmousedown = function (e) {
+      if (! e) e = window.event;
+      ssb.asd = this.cont;
 
-    $('#closemenu').click(function(){
-        $('.head-menu').removeClass('open');
-        $('.opacity').addClass('hidden');
-        // $('.site-menu').removeClass('hidden');
-    });
-
-    $('#showmenu').click(function() {
-        $('.head-menu').addClass('open');
-    });
-    $('#showmenu').click(function() {
-        $('.opacity').removeClass('hidden');
-    });
-
-    $('#toggle-search-mb').click(function() {
-        $('.search-box').toggleClass('open');
-        $('.opacity').toggleClass('hidden');
-    });
-
-    var stickyTop = $("#navbar").offset().top;
-    var idMenu =  $("#navbar");
-    if(window.outerWidth <= 1200)
-    {
-        idMenu =  $("#navbar-mb");
-        stickyTop = idMenu.offset().top;
+      ssb.mouseY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+      for (var o = this.cont, y = 0; o != null; o = o.offsetParent) y += o.offsetTop;
+      this.cont.scrollTop = (ssb.mouseY - y - (this.cont.ratio * this.cont.offsetHeight / 2) - this.cont.sw) / this.cont.ratio;
+      this.cont.sb.onmousedown(e);
     }
 
-    $(window).scroll(function () {
-        if ($(window).scrollTop() >=  stickyTop) {
-            idMenu.addClass("sticky");
-        } else {
-            idMenu.removeClass('sticky');
-        }
-    });
-    $("#news-slider").owlCarousel({
-        autoPlay: false,
-        autoplayTimeout: 5000,
-        slideSpeed: 500,
-        autoHeight: false,
-        items: 1,
-        navigation: true,
-        itemsDesktop: [1199, 1],
-        itemsDesktopSmall: [979, 1],
-        itemsMobile: [768, 1],
-        navigationText: ["", ""]
-    });
-    $("#fc-slider").owlCarousel({
-        autoPlay: false,
-        autoplayTimeout: 5000,
-        slideSpeed: 500,
-        items: 3,
-        navigation: true,
-        itemsDesktop: [1199, 3],
-        itemsDesktopSmall: [992, 2],
-        itemsMobile: [767, 1],
-        navigationText: ["", ""]
-    });
-    $(window).bind('resize', function(e){
-    window.resizeEvt;
-    $(window).resize(function(){
-        clearTimeout(window.resizeEvt);
-        window.resizeEvt = setTimeout(function(){
-          var topNew = $('#news-slider').height();
-             if(topNew){
-               $('#post').css({"maxHeight":topNew-40});
-               $('.homeads').css({"height":topNew});
-             }
-             var media = $('.multi-media').outerHeight();
-             $('#scrollbar').css({"maxHeight":media});
-             ssb.refresh();
-        }, 350);
-      });
-    });
-    var topNew = $('#news-slider').height();
-       if(topNew){
-         if(topNew<400) topNew = 400;
-         $('#post').css({"maxHeight":topNew-40});
-         $('.homeads').css({"height":topNew});
-         var media = $('.multi-media').outerHeight();
-         $('#scrollbar').css({"maxHeight":media});
-       }
-       function carouselNormalization() {
+    // onmousedown events
+    cont.su.onmousedown = cont.su.ondblclick = function (e) { ssb.mousedown(this, -1); return false; }
+    cont.sd.onmousedown = cont.sd.ondblclick = function (e) { ssb.mousedown(this,  1); return false; }
 
-        window.heights = [], //create empty array to store height values
-        window.tallest; //create variable to make note of the tallest slide
+    //onmouseout events
+    cont.su.onmouseout = cont.su.onmouseup = ssb.clear;
+    cont.sd.onmouseout = cont.sd.onmouseup = ssb.clear;
 
-        function normalizeHeights() {
-            jQuery('.ni-content').each(function() { //add heights to array
-                window.heights.push(jQuery(this).outerHeight());
-            });
-            window.tallest = Math.max.apply(null, window.heights); //cache largest value
-            jQuery('.ni-content').each(function() {
-                jQuery(this).css('min-height',tallest + 'px');
-            });
-        }
-        normalizeHeights();
-
-        jQuery(window).on('resize orientationchange', function () {
-
-            window.tallest = 0, window.heights.length = 0; //reset vars
-            jQuery('.ni-content').each(function() {
-                jQuery(this).css('min-height','0'); //reset min-height
-            });
-
-            normalizeHeights(); //run it again
-
-        });
-
+    // on mouse over - apply custom class name: ssb_sb_over
+    cont.sb.onmouseover = function (e) {
+      if (! this.cont.sg) this.className = 'ssb_sb ssb_sb_over';
+      return false;
     }
-	
-    jQuery( document ).ready(function() {
-        carouselNormalization();
-    });
-	
-	$('.time-now').html(function(){
-		var d = new Date();
-		var weekday = new Array(7);
-		weekday[0] = "Chủ nhật";
-		weekday[1] = "Thứ hai";
-		weekday[2] = "Thứ ba";
-		weekday[3] = "Thứ tư";
-		weekday[4] = "Thứ năm";
-		weekday[5] = "Thứ sáu";
-		weekday[6] = "Thứ bảy";
 
-		var n = weekday[d.getDay()];
-		var date = d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear();
-		var dateTime = n+', '+date;
-		return dateTime;
-	});
-});
-var BrowserDetect = {
-        init: function () {
-            this.browser = this.searchString(this.dataBrowser) || "Other";
-            this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "Unknown";
-        },
-        searchString: function (data) {
-            for (var i = 0; i < data.length; i++) {
-                var dataString = data[i].string;
-                this.versionSearchString = data[i].subString;
+    // on mouse out - revert back our usual class name 'ssb_sb'
+    cont.sb.onmouseout  = function (e) {
+      if (! this.cont.sg) this.className = 'ssb_sb';
+      return false;
+    }
 
-                if (dataString.indexOf(data[i].subString) !== -1) {
-                    return data[i].identity;
-                }
-            }
-        },
-        searchVersion: function (dataString) {
-            var index = dataString.indexOf(this.versionSearchString);
-            if (index === -1) {
-                return;
-            }
+    // onscroll - change positions of scroll element
+    cont.ssb_onscroll = function () {
+      this.ratio = (this.offsetHeight - 2 * this.sw) / this.scrollHeight;
+      this.sb.style.top = Math.floor(p+this.sw + this.scrollTop * this.ratio) + 'px';
+    }
 
-            var rv = dataString.indexOf("rv:");
-            if (this.versionSearchString === "Trident" && rv !== -1) {
-                return parseFloat(dataString.substring(rv + 3));
-            } else {
-                return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
-            }
-        },
+    // scrollbar width
+    cont.sw = 8;
 
-        dataBrowser: [
-            {string: navigator.userAgent, subString: "Edge", identity: "MS Edge"},
-            {string: navigator.userAgent, subString: "MSIE", identity: "Explorer"},
-            {string: navigator.userAgent, subString: "Trident", identity: "Explorer"},
-            {string: navigator.userAgent, subString: "Firefox", identity: "Firefox"},
-            {string: navigator.userAgent, subString: "Opera", identity: "Opera"},
-            {string: navigator.userAgent, subString: "OPR", identity: "Opera"},
+    // start scrolling
+    cont.ssb_onscroll();
+    ssb.refresh();
 
-            {string: navigator.userAgent, subString: "Chrome", identity: "Chrome"},
-            {string: navigator.userAgent, subString: "Safari", identity: "Safari"}
-        ]
-    };
+    // binding own onscroll event
+    cont.onscroll = cont.ssb_onscroll;
+    return cont;
+  },
+
+  // initialization
+  init : function () {
+    if (window.oper || (! window.addEventListener && ! window.attachEvent)) { return false; }
+
+    // temp inner function for event registration
+    function addEvent (o, e, f) {
+      if (window.addEventListener) { o.addEventListener(e, f, false); ssb.w3c = true; return true; }
+      if (window.attachEvent) return o.attachEvent('on' + e, f);
+      return false;
+    }
+
+    // binding events
+    addEvent(window.document, 'mousemove', ssb.onmousemove);
+    addEvent(window.document, 'mouseup', ssb.onmouseup);
+    addEvent(window, 'resize', ssb.refresh);
+    return true;
+  },
+
+  // create and append div finc
+  create_div : function(c, cont, cont_clone) {
+    var o = document.createElement('div');
+    o.cont = cont;
+    o.className = c;
+    cont_clone.appendChild(o);
+    return o;
+  },
+  // do clear of controls
+  clear : function () {
+    clearTimeout(ssb.to);
+    ssb.sc = 0;
+    return false;
+  },
+  // refresh scrollbar
+  refresh : function () {
+    for (var i = 0, N = ssb.N; i < N; i++) {
+      var o = ssb.aConts[i];
+      o.ssb_onscroll();
+      o.sb.style.width = o.st.style.width = o.su.style.width = o.su.style.height = o.sd.style.width = o.sd.style.height = o.sw + 'px';
+      o.sb.style.height = Math.ceil(Math.max(o.sw * .5, o.ratio * o.offsetHeight) + 1) + 'px';
+    }
+  },
+  // arrow scrolling
+  arrow_scroll : function () {
+    if (ssb.sc != 0) {
+      ssb.asd.scrollTop += 6 * ssb.sc / ssb.asd.ratio;
+      ssb.to = setTimeout(ssb.arrow_scroll, ssb.sp);
+      ssb.sp = 100;
+    }
+  },
+
+  /* event binded functions : */
+  // scroll on mouse down
+  mousedown : function (o, s) {
+    if (ssb.sc == 0) {
+      // new class name
+      o.cont.sb.className = 'ssb_sb ssb_sb_down';
+      ssb.asd = o.cont;
+      ssb.sc = s;
+      ssb.sp = 400;
+      ssb.arrow_scroll();
+    }
+  },
+  // on mouseMove binded event
+  onmousemove : function(e) {
+    if (! e) e = window.event;
+    // get vertical mouse position
+    ssb.mouseY = e.screenY;
+    if (ssb.asd.sg) ssb.asd.scrollTop = ssb.asd.sZ + (ssb.mouseY - ssb.asd.yZ) / ssb.asd.ratio;
+  },
+  // on mouseUp binded event
+  onmouseup : function (e) {
+    if (! e) e = window.event;
+    var tg = (e.target) ? e.target : e.srcElement;
+    if (ssb.asd && document.releaseCapture) ssb.asd.releaseCapture();
+
+    // new class name
+    if (ssb.asd) ssb.asd.sb.className = (tg.className.indexOf('scrollbar') > 0) ? 'ssb_sb ssb_sb_over' : 'ssb_sb';
+    document.onselectstart = '';
+    ssb.clear();
+    ssb.asd.sg = false;
+  }
+}
+
+window.onload = function() {
+  ssb.scrollbar('post'); // scrollbar initialization
+  ssb.scrollbar('scrollbar');
+}
