@@ -929,7 +929,7 @@ li.dir:hover .sub3{
     padding-left: 10px;
     /* max-height: 45px; */
     display: -webkit-box;
-    -webkit-line-clamp: 3 !important;
+    -webkit-line-clamp: 2 !important;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -937,7 +937,7 @@ li.dir:hover .sub3{
 .date{
     position: absolute;
     right: 0;
-    bottom: 5px;
+    bottom: 7px;
     margin: 0;
     font-size: 13px;
     color: #838383;
