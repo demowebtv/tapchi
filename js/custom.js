@@ -84,7 +84,6 @@
              $('#scrollbar').css({"maxHeight":media});
              ssb.refresh();
         }, 350);
-        normalizeHeights();
       });
     });
     var topNew = $('#news-slider').height();
