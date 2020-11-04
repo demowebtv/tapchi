@@ -84,13 +84,15 @@
              $('#scrollbar').css({"maxHeight":media});
              ssb.refresh();
         }, 350);
+        normalizeHeights();
       });
     });
     var topNew = $('#news-slider').height();
        if(topNew){
-         if(topNew<400) topNew = 400;
-         $('#post').css({"maxHeight":topNew-40});
-         $('.homeads').css({"height":topNew});
+         if(topNew>500){
+           $('#post').css({"maxHeight":topNew-40});
+           $('.homeads').css({"height":topNew});
+          }
          var media = $('.multi-media').outerHeight();
          $('#scrollbar').css({"maxHeight":media});
        }

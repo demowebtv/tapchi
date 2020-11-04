@@ -580,7 +580,8 @@ li.dir:hover .sub3{
     transition: all .2s;
     margin-right: 10px;
 }
-.ni-image{max-height: 395px; overflow: hidden;}
+.ni-image{height: 395px; overflow: hidden;}
+.ni-image img {height: 100%;object-fit: cover;}
 .top-news .ads{overflow: hidden;}
 .top-news .ads img{height: 100%;}
 .owl-pagination .owl-page:last-child {
