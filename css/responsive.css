@@ -211,7 +211,7 @@
         font-size: 18px;
     }
 		.focus{padding: 0;}
-		#fc-slider{padding: 0;}
+		#fc-slider{padding: 0; margin-bottom: 8px;}
 		#fc-slider .owl-prev{left: 5px;}
 		#fc-slider .owl-next{right: 5px;}
 		.ni-image{height: 320px;}
