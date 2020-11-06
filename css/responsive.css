@@ -62,6 +62,9 @@
 	.row-cs{
 			display: none;
 	}
+	#stickThis.stick{
+	    width: 225px;
+	}
 }
 
 @media (min-width: 992px){
