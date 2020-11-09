@@ -173,8 +173,8 @@ function sticktothetop() {
           $('#stickThis').removeClass('stick');
            $('#stick-here').height(0);
       }
-      if(window_top > $('footer').offset().top - window.innerHeight-300){
-            var cate = $('.category-slider').outerHeight();
+      var cate = $('.category-slider').outerHeight();
+      if(window_top > $('footer').offset().top - window.innerHeight-120-cate){
             var measure = $('footer'),
         windowHeight = $(window).height(),
         scrollDistance = $(window).scrollTop(),
