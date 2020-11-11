@@ -88,7 +88,7 @@ $(document).ready(function(){
   });
   var topNew = $('#news-slider').height();
      if(topNew){
-       if(topNew>500){
+       if(topNew>300){
          $('#post').css({"maxHeight":topNew-40});
          $('.homeads').css({"height":topNew});
         }
