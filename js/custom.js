@@ -165,33 +165,39 @@ $(this).html(text);
 function sticktothetop() {
       var window_top = $(window).scrollTop();
       var top = $('#stick-here').offset().top;
+      var news = $('.col-lg-3 #post').outerHeight();
       if (window_top >= $('#stick-here').offset().top + $('#stick-here').
-          outerHeight() - window.innerHeight) {
+          outerHeight() - news - window.innerHeight) {
           $('#stickThis').addClass('stick');
            $('#stick-here').height($('#stickThis').outerHeight());
+           var cate = $('.category-slider').outerHeight();
+           if(window_top > $('footer').offset().top - window.innerHeight - 120 - cate){
+             var measure = $('footer'),
+             windowHeight = $(window).height(),
+             scrollDistance = $(window).scrollTop(),
+             divOffsetTop = measure.offset().top;
+             if(cate >0){
+             var delta = Math.abs(divOffsetTop - (scrollDistance + windowHeight  + cate + 150));
+             }
+             else{
+             var delta = Math.abs(divOffsetTop - (scrollDistance + windowHeight + 120));
+             }
+             document.getElementById("stickThis").style.bottom =delta+"px";
+           }else{
+             document.getElementById("stickThis").style.bottom = "0";
+           }
+           var total = $('.sidebar').outerHeight() + $('.other-news').outerHeight() + $('.tag').outerHeight() + $('.comment-box').outerHeight();
+           if(total >0 && total < $('.content-home .col-lg-3 .ads-mod').innerHeight() + news){
+             $('#stickThis').removeClass('stick');
+              $('#stick-here').height(0);
+           }
       }else {
           $('#stickThis').removeClass('stick');
            $('#stick-here').height(0);
       }
-      var cate = $('.category-slider').outerHeight();
-      if(window_top > $('footer').offset().top - window.innerHeight - 120 - cate){
-            var measure = $('footer'),
-        windowHeight = $(window).height(),
-        scrollDistance = $(window).scrollTop(),
-        divOffsetTop = measure.offset().top;
-        if(cate >0){
-        var delta = Math.abs(divOffsetTop - (scrollDistance + windowHeight  + cate + 150));
-        }
-        else{
-        var delta = Math.abs(divOffsetTop - (scrollDistance + windowHeight + 120));
-        }
-        document.getElementById("stickThis").style.bottom =delta+"px";
-      }else{
-        document.getElementById("stickThis").style.bottom = "0";
-      }
   }
   $(function() {
-      if($('.content-home .col-lg-9').innerHeight() - $('.content-home .col-lg-3 .ads-mod').innerHeight()>200){
+      if($('.content-home .col-lg-9').innerHeight() - ($('.content-home .col-lg-3 .ads-mod').innerHeight())>200){
       $(window).scroll(sticktothetop);
       sticktothetop();
     }
