@@ -875,6 +875,21 @@ li.dir:hover .sub3{
     border-right: 1px solid #e5e5e5;
 }
 .v-item img{text-align: center;padding-bottom: 5px;}
+  .v-item:before {
+    content: '';
+      position: absolute;
+      top: 26%;
+      left: 37%;
+      width: 60px;
+      height: 60px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image:url('../images/play.png');
+      background-size: 100%;
+}
+.v-item:hover:before{
+  background-image:url('../images/playhover.png');
+}
 /* content-home */
 .content-home{
     float: left;
