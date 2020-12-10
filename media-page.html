@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel='stylesheet' href='css/ekko-lightbox.css'>
 </head>
 
 <body>
@@ -257,42 +258,42 @@
                                   <div class="row">
                                     <div class="col-sm-6 col-md-4">
                                       <div class="media-items">
-                                        <div class="media-thum"><a href="#" ><img  src="images/media_item1.png" alt=""></a></div>
+                                        <div class="media-thum"><a  data-title="Thư viện hình ảnh" data-footer="Tổng cục trưởng Cao Anh Tuấn chủ trì Hội nghị giao ban trực tuyến công tác thuế"  href="https://unsplash.it/1200/768.jpg?image=251"  data-toggle="lightbox" data-gallery="gallery"><img  src="images/media_item1.png" alt=""></a></div>
                                         <p class="media-date">08/09/2020</p>
                                         <h2  class="cl-title"><a href="#" >Tổng cục trưởng Cao Anh Tuấn chủ trì Hội nghị giao ban trực tuyến công tác thuế</a></h2>
                                       </div>
                                     </div>
                                     <div class="col-sm-6 col-md-4">
                                       <div class="media-items">
-                                        <div class="media-thum"><a href="#" ><img  src="images/media_item2.png" alt=""></a></div>
+                                        <div class="media-thum"><a href="images/media_item2.png" data-toggle="lightbox" data-gallery="gallery"><img  src="images/media_item2.png" alt=""></a></div>
                                         <p class="media-date">08/09/2020</p>
                                         <h2 class="cl-title"><a href="#" >Kết nạp Đảng</a></h2>
                                       </div>
                                     </div>
                                     <div class="col-sm-6 col-md-4">
                                       <div class="media-items">
-                                        <div class="media-thum"><a href="#" ><img  src="images/media_item3.png" alt=""></a></div>
+                                        <div class="media-thum"><a href="images/media_item3.png" data-toggle="lightbox" data-gallery="gallery"><img  src="images/media_item3.png" alt=""></a></div>
                                         <p class="media-date">08/09/2020</p>
                                         <h2  class="cl-title"><a href="#" >Phó TCT Đặng Ngọc Minh chủ trì họp trực tuyến quốc tế về đối phố dịch Covid19</a></h2>
                                       </div>
                                     </div>
                                     <div class="col-sm-6 col-md-4">
                                       <div class="media-items">
-                                        <div class="media-thum"><a href="#" ><img src="images/media_item1.png" alt=""></a></div>
+                                        <div class="media-thum"><a href="images/media_item1.png" data-toggle="lightbox" data-gallery="gallery"><img src="images/media_item1.png" alt=""></a></div>
                                         <p class="media-date">08/09/2020</p>
                                         <h2  class="cl-title"><a href="#" >Tổng cục trưởng Cao Anh Tuấn chủ trì Hội nghị giao ban trực tuyến công tác thuế</a></h2>
                                       </div>
                                     </div>
                                     <div class="col-sm-6 col-md-4">
                                       <div class="media-items">
-                                        <div class="media-thum"><a href="#" ><img src="images/media_item2.png" alt=""></a></div>
+                                        <div class="media-thum"><a href="images/media_item2.png" data-toggle="lightbox" data-gallery="gallery"><img src="images/media_item2.png" alt=""></a></div>
                                         <p class="media-date">08/09/2020</p>
                                         <h2 class="cl-title"><a href="#" >Kết nạp Đảng</a></h2>
                                       </div>
                                     </div>
                                     <div class="col-sm-6 col-md-4">
                                       <div class="media-items">
-                                        <div class="media-thum"><a href="#" ><img src="images/media_item3.png" alt=""></a></div>
+                                        <div class="media-thum"><a href="images/media_item3.png" data-toggle="lightbox" data-gallery="gallery"><img src="images/media_item3.png" alt=""></a></div>
                                         <p class="media-date">08/09/2020</p>
                                         <h2  class="cl-title"><a href="#" >Phó TCT Đặng Ngọc Minh chủ trì họp trực tuyến quốc tế về đối phố dịch Covid19</a></h2>
                                       </div>
@@ -455,12 +456,18 @@
 
         </div>
     </footer>
-
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script type="text/javascript" src="js/scroll.js"></script>
+    <script src='js/ekko-lightbox.min.js'></script>
+    <script>
+    $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
+    </script>
 </body>
 
 </html>
