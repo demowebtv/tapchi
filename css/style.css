@@ -1427,3 +1427,30 @@ textarea.form-control {
     font-size: 15px;
     color: #757575;
 }
+/* zoom lightbox */
+.zoom-btn {
+position: absolute;
+opacity: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+width: 60px;
+height: 60px;
+border-radius: 4px;
+top: 35%;
+left: 50%;
+margin-left: -30px;
+margin-top: -30px;
+-webkit-transition: .3s all;
+-o-transition: .3s all;
+transition: .3s all;
+}.zoom-btn:before {
+background: url('../images/icn-search-white.svg') center center no-repeat;
+-webkit-background-size: 24px 24px;
+background-size: 24px;
+width: 60px;
+height: 60px;
+content: "";
+position: absolute;
+}
+.media-thum:hover .zoom-btn{opacity: 1}
