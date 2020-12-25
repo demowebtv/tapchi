@@ -246,24 +246,23 @@
                  <li><img src="https://demowebtv.github.io/tapchi/images/news1.png" class="img-fluid" alt=""><div class="caption-image-grl">Tổng cục trưởng Cao Anh Tuấn chủ trì Hội nghị giao ban trực tuyến công tác thuế</div></li>
                  <li><img src="https://demowebtv.github.io/tapchi/images/news1.png" class="img-fluid" alt=""><div class="caption-image-grl">Tổng cục trưởng Cao Anh Tuấn chủ trì Hội nghị giao ban trực tuyến công tác thuế</div></li>
                     </ul>
-
-                    <!-- The thumbnails -->
-                    <ul id="bxslider-pager">
-                 <li data-slideIndex="0"><a href=""><img class="img-fluid" src="https://demowebtv.github.io/tapchi/images/news1.png"></a></li>
-                 <li data-slideIndex="1"><a href=""><img class="img-fluid" src="https://demowebtv.github.io/tapchi/images/news1.png"></a></li>
-                 <li data-slideIndex="2"><a href=""><img class="img-fluid" src="https://demowebtv.github.io/tapchi/images/news1.png"></a></li>
-                 <li data-slideIndex="3"><a href=""><img class="img-fluid" src="https://demowebtv.github.io/tapchi/images/news1.png"></a></li>
-                    <li data-slideIndex="4"><a href=""><img class="img-fluid" src="https://demowebtv.github.io/tapchi/images/news1.png"></a></li>
-                    <li data-slideIndex="5"><a href=""><img class="img-fluid" src="https://demowebtv.github.io/tapchi/images/news1.png"></a></li>
-                      <li data-slideIndex="6"><a href=""><img class="img-fluid" src="https://demowebtv.github.io/tapchi/images/news1.png"></a></li>
-                    </ul>
-                     <!-- end -->
                   </div>
                   <div class="col-lg-4">
                     <h2  class="cl-title"><a href="#" >Tổng cục trưởng Cao Anh Tuấn chủ trì Hội nghị giao ban trực tuyến công tác thuế</a></h2>
                     <p class="media-date">08/09/2020</p>
                     <div class="content-box-img">Tỉnh Kiên Giang đã chuẩn bị khoảng 51.500 tấn hàng hóa các loại với tổng trị giá hơn 2.315 tỷ đồng để cung ứng trong dịp Tết Nguyên đán Tân Sửu năm 2021. Các mặt hàng thiết yếu như: gạo, thịt, tôm, cá, đường, sữa, bánh kẹo, mứt, rượu, bia… Nguồn hàng nông sản, thủy sản chủ yếu sản xuất trong tỉnh, hàng thực phẩm chế biến của các tỉnh, thành Đồng bằng sông Cửu Long, thành phố Hồ Chí Minh được đưa về phục vụ nhu cầu tiêu dùng của nhân dân trong tỉnh dịp Tết.</div>
                   </div>
+                  <div class="col-lg-12"><!-- The thumbnails -->
+                  <ul id="bxslider-pager">
+               <li data-slideIndex="0"><a href=""><img class="img-fluid" src="https://demowebtv.github.io/tapchi/images/news1.png"></a></li>
+               <li data-slideIndex="1"><a href=""><img class="img-fluid" src="https://demowebtv.github.io/tapchi/images/news1.png"></a></li>
+               <li data-slideIndex="2"><a href=""><img class="img-fluid" src="https://demowebtv.github.io/tapchi/images/news1.png"></a></li>
+               <li data-slideIndex="3"><a href=""><img class="img-fluid" src="https://demowebtv.github.io/tapchi/images/news1.png"></a></li>
+                  <li data-slideIndex="4"><a href=""><img class="img-fluid" src="https://demowebtv.github.io/tapchi/images/news1.png"></a></li>
+                  <li data-slideIndex="5"><a href=""><img class="img-fluid" src="https://demowebtv.github.io/tapchi/images/news1.png"></a></li>
+                    <li data-slideIndex="6"><a href=""><img class="img-fluid" src="https://demowebtv.github.io/tapchi/images/news1.png"></a></li>
+                  </ul>
+                   <!-- end --></div>
                 </div>
                 </div>
               </section>
@@ -511,9 +510,9 @@
           }
         });
         var realThumbSlider=$j("ul#bxslider-pager").bxSlider({
-          minSlides:6,
-          maxSlides: 6,
-          slideWidth: 150,
+          minSlides:12,
+          maxSlides: 12,
+          slideWidth: 120,
           slideMargin: 10,
           moveSlides: 1,
           pager:false,
@@ -533,7 +532,7 @@
 
         linkRealSliders(realSlider,realThumbSlider);
 
-        if($j("#bxslider-pager li").length<7){
+        if($j("#bxslider-pager li").length<13){
           $j("#bxslider-pager .bx-next").hide();
         }
 
@@ -553,8 +552,8 @@
       $thumbS.find('.active').removeClass("active");
       $thumbS.find('li[data-slideIndex="'+newIndex+'"]').addClass("active");
 
-      if(slider.getSlideCount()-newIndex>=6)slider.goToSlide(newIndex);
-      else slider.goToSlide(slider.getSlideCount()-6);
+      // if(slider.getSlideCount()-newIndex>=12)slider.goToSlide(newIndex);
+      // else slider.goToSlide(slider.getSlideCount()-12);
 
     }
     </script>
